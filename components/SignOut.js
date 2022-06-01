@@ -2,6 +2,8 @@ import { useMoralis } from "react-moralis";
 import signOutStyle from "../styles/SignOut.module.css";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
+import { Button, Box, Text } from '@chakra-ui/react'
+import { Divider } from '@chakra-ui/react'
 
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
@@ -51,9 +53,10 @@ export const SignOut = () => {
             text={user.attributes.accounts}
             //onCopy={() => setCopied(true)}
           >
-            <button>지갑 주소 복사하기</button>
+            <Button>지갑 주소 복사하기</Button>
           </CopyToClipboard>
         </div>
+        
         {/* <div>
           <h5>Balance (Eth)</h5>
           <p>{balance} </p>
@@ -65,11 +68,19 @@ export const SignOut = () => {
           Test Transfer
         </button> */}
         <button className={styles.loginButton} onClick={logout}>
-          로그아웃 하기
+          로그아웃
         </button>
       </div>
     </div>
-
+    
+    <div className={signOutStyle.signOutCard}>
+      <h2>ARTIST_NAME</h2>
+      <Text fontSize='md'>아티스트 소개</Text>
+      <Text fontSize='md'>fanber_ARTIST_NAME_GOLD NFT: 인스타 팔로우하고 @fanber_official로 지갑주소 DM보내면 드립니다</Text>
+      <Text fontSize='md'>음원 NFT 소개</Text>
+      <Text fontSize='md'>Opensea에서 구매하기</Text>
+      
+    </div>
     </div>
   );
 };

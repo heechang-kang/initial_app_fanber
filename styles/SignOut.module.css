@@ -1,12 +1,13 @@
 .signOutCard {
-  width: 50vw;
+  width: 90vw;
   height: 300px;
-  background-color: white;
+  background-color: rgb(242, 236, 236);
   padding: 20px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 30px;
 }
 
 .subHeader {
